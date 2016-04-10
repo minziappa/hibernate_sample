@@ -12,6 +12,7 @@ import io.sample.hibernate.entity.User;
 import io.sample.hibernate.service.SampleService;
 
 @Service
+//@Transactional
 public class SampleServiceImpl implements SampleService {
 
 	@Autowired
@@ -23,7 +24,6 @@ public class SampleServiceImpl implements SampleService {
 		return user;
 	}
 
-	@Transactional
 	@Override
 	public List<User> getAll() {
 		List<User> userList = userDao.findAll();
